@@ -10,10 +10,8 @@ import {
   TrendingUp,
   Star,
   ChevronRight,
-  CheckCircle,
   Globe,
   Smartphone,
-  BarChart3,
   Shield,
 } from "lucide-react";
 
@@ -205,7 +203,8 @@ export default function HomePage() {
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
           style={{
-            background: "radial-gradient(circle, rgba(145,200,228,0.08) 0%, transparent 70%)",
+            background: "radial-gradient(circle, var(--blue-glow), transparent 70%)",
+            opacity: 0.15
           }}
         />
 
@@ -434,7 +433,7 @@ export default function HomePage() {
                     ))}
                   </div>
                   <p className="text-navy/80 leading-relaxed flex-1 mb-6 text-[0.95rem]">
-                    "{t.quote}"
+                    &quot;{t.quote}&quot;
                   </p>
                   <div className="flex items-center gap-4">
                     <div

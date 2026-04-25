@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useRef } from "react";
-import Link from "next/link";
 import { motion, useInView } from "framer-motion";
 import { ArrowRight, Clock, ChevronRight } from "lucide-react";
 

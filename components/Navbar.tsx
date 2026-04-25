@@ -48,13 +48,16 @@ export default function Navbar() {
         <nav className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between gap-8">
           {/* Logo */}
           <Link href="/" className="flex items-center shrink-0">
-            <div className="relative h-10 w-auto">
+            <div className={cn(
+              "relative h-10 px-3 py-1 rounded-lg transition-all duration-300",
+              isDark ? "bg-white shadow-lg shadow-gold/10" : "bg-transparent"
+            )}>
               <Image
                 src="/logo.jpg"
                 alt="NEBRAS Logo"
-                width={130}
-                height={40}
-                className="h-10 w-auto object-contain"
+                width={120}
+                height={36}
+                className="h-full w-auto object-contain"
                 priority
               />
             </div>
@@ -67,15 +70,26 @@ export default function Navbar() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200",
+                  "px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 relative group",
                   pathname === link.href
-                    ? "bg-gold/10 text-navy"
+                    ? isDark ? "text-white" : "text-navy"
                     : isDark
-                    ? "text-white/80 hover:text-white hover:bg-white/10"
-                    : "text-navy/70 hover:text-navy hover:bg-navy/5"
+                    ? "text-white/60 hover:text-white"
+                    : "text-navy/60 hover:text-navy"
                 )}
               >
                 {link.label}
+                {pathname === link.href && (
+                  <motion.div
+                    layoutId="nav-active"
+                    className="absolute inset-0 bg-blue-glow/10 rounded-full -z-10"
+                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  />
+                )}
+                <span className={cn(
+                  "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-1/2",
+                  isDark ? "bg-gold" : "bg-blue-glow"
+                )} />
               </Link>
             ))}
           </div>

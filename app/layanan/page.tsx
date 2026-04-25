@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import Link from "next/link";
 import { motion, useInView } from "framer-motion";
-import { ArrowRight, CheckCircle, X, Globe, Smartphone, Zap, Users, ShoppingBag, Building2, Star, Megaphone } from "lucide-react";
+import { ArrowRight, CheckCircle, X, Globe, Users, ShoppingBag, Building2, Star, Megaphone } from "lucide-react";
 
 function FadeUp({ children, delay = 0, className = "" }: { children: React.ReactNode; delay?: number; className?: string }) {
   const ref = useRef(null);
