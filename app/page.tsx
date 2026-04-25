@@ -1,5 +1,4 @@
 "use client";
-// Trigger build fix v2
 
 import React, { useRef, useEffect } from "react";
 import Link from "next/link";
@@ -16,7 +15,7 @@ import {
   Shield,
 } from "lucide-react";
 
-/* ─── Fade-up Animation Wrapper ─── */
+/* ΓöÇΓöÇΓöÇ Fade-up Animation Wrapper ΓöÇΓöÇΓöÇ */
 function FadeUp({
   children,
   delay = 0,
@@ -41,7 +40,7 @@ function FadeUp({
   );
 }
 
-/* ─── Counter ─── */
+/* ΓöÇΓöÇΓöÇ Counter ΓöÇΓöÇΓöÇ */
 function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
@@ -60,7 +59,7 @@ function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
   return <span ref={ref}>0{suffix}</span>;
 }
 
-/* ─── Trusted By Logos (Marquee) ─── */
+/* ΓöÇΓöÇΓöÇ Trusted By Logos (Marquee) ΓöÇΓöÇΓöÇ */
 const clients = [
   "Al-Barakah Travel", "Safwah Tours", "PT. Nusantara", "Hidayah Umrah",
   "Studio Kreatif", "Toko Berkah", "Dr. Ahmad", "CV. Maju Bersama",
@@ -95,7 +94,7 @@ function TrustedBy() {
   );
 }
 
-/* ─── Why Choose Cards ─── */
+/* ΓöÇΓöÇΓöÇ Why Choose Cards ΓöÇΓöÇΓöÇ */
 const whyCards = [
   {
     icon: <Sparkles size={28} className="text-gold" />,
@@ -117,7 +116,7 @@ const whyCards = [
   },
 ];
 
-/* ─── Industries ─── */
+/* ΓöÇΓöÇΓöÇ Industries ΓöÇΓöÇΓöÇ */
 const industries = [
   {
     title: "Travel Umrah",
@@ -153,7 +152,7 @@ const industries = [
   },
 ];
 
-/* ─── Testimonials ─── */
+/* ΓöÇΓöÇΓöÇ Testimonials ΓöÇΓöÇΓöÇ */
 const testimonials = [
   {
     name: "Ustadz Ahmad Fauzi",
@@ -161,7 +160,7 @@ const testimonials = [
     quote: "Website baru kami langsung bikin jamaah lebih percaya. Pendaftaran Umrah naik 280% dalam 3 bulan pertama. NEBRAS benar-benar paham bisnis kami.",
     rating: 5,
     avatar: "AF",
-    metric: "↑ 280% leads",
+    metric: "Γåæ 280% leads",
   },
   {
     name: "Sarah Wijaya",
@@ -169,7 +168,7 @@ const testimonials = [
     quote: "Sebelumnya website kami kelihatan murahan. Setelah re-design oleh NEBRAS, pelanggan bilang 'wah keren banget!' dan order online meningkat drastis.",
     rating: 5,
     avatar: "SW",
-    metric: "↑ 190% sales",
+    metric: "Γåæ 190% sales",
   },
   {
     name: "Rizky Hamdani",
@@ -177,11 +176,11 @@ const testimonials = [
     quote: "Personal website saya sekarang terlihat sangat profesional. Klien konsultasi dari LinkedIn langsung terkesan saat melihat website saya.",
     rating: 5,
     avatar: "RH",
-    metric: "↑ 3x inquiry",
+    metric: "Γåæ 3x inquiry",
   },
 ];
 
-/* ─── HOMEPAGE ─── */
+/* ΓöÇΓöÇΓöÇ HOMEPAGE ΓöÇΓöÇΓöÇ */
 export default function HomePage() {
   const heroRef = useRef(null);
   const { scrollYProgress } = useScroll({
@@ -193,7 +192,7 @@ export default function HomePage() {
 
   return (
     <>
-      {/* ═══ HERO ═══ */}
+      {/* ΓòÉΓòÉΓòÉ HERO ΓòÉΓòÉΓòÉ */}
       <section
         ref={heroRef}
         className="relative min-h-screen flex items-center overflow-hidden"
@@ -204,8 +203,7 @@ export default function HomePage() {
         <div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
           style={{
-            background: "radial-gradient(circle, var(--blue-glow), transparent 70%)",
-            opacity: 0.15
+            background: "radial-gradient(circle, rgba(145,200,228,0.08) 0%, transparent 70%)",
           }}
         />
 
@@ -222,40 +220,55 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/10 bg-white/5 text-white/70 text-sm font-medium mb-8"
             >
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-              Tersedia untuk proyek baru — Slot terbatas bulan ini
+              Tersedia untuk proyek baru ΓÇö Slot terbatas bulan ini
             </motion.div>
 
-            {/* Branding Accent */}
+            {/* Lantern Icon */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.05, duration: 0.8 }}
-              className="flex justify-center mb-10"
+              transition={{ delay: 0.1, duration: 0.8 }}
+              className="flex justify-center mb-8"
             >
-              <div className="w-12 h-1 bg-gradient-to-r from-gold to-transparent rounded-full" />
+              <div className="relative">
+                <div
+                  className="w-20 h-20 rounded-2xl flex items-center justify-center text-navy text-4xl font-black animate-float"
+                  style={{
+                    background: "#FFC436",
+                    boxShadow: "0 0 60px rgba(255,196,54,0.5), 0 0 120px rgba(255,196,54,0.2)",
+                  }}
+                >
+                  ≡ƒÅ«
+                </div>
+                <div
+                  className="absolute inset-0 rounded-2xl animate-glow"
+                  style={{ background: "rgba(255,196,54,0.2)", filter: "blur(20px)" }}
+                />
+              </div>
             </motion.div>
 
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
-              className="text-white mb-8"
-              style={{ fontSize: "clamp(3.5rem,8vw,7.5rem)", lineHeight: "0.85", letterSpacing: "-0.06em", fontWeight: 900 }}
+              transition={{ delay: 0.15, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
+              className="text-white mb-6"
+              style={{ fontSize: "clamp(3rem,7vw,6.5rem)", lineHeight: "0.95", letterSpacing: "-0.04em", fontWeight: 900 }}
             >
-              Website Premium. <br />
-              <span className="text-gradient-gold">Dampak Nyata.</span>
+              Website Premium.{" "}
+              <span className="text-gradient-gold">Pertumbuhan Nyata.</span>
             </motion.h1>
 
             {/* Sub */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 1 }}
-              className="text-white/40 text-xl md:text-2xl leading-relaxed mb-12 max-w-2xl mx-auto font-medium"
-              style={{ letterSpacing: "-0.03em" }}
+              transition={{ delay: 0.25, duration: 0.8 }}
+              className="text-white/55 text-xl md:text-2xl leading-relaxed mb-10 max-w-2xl mx-auto"
+              style={{ letterSpacing: "-0.02em" }}
             >
-              Bukan sekadar desain cantik. Kami membangun mesin konversi yang memenangkan kepercayaan klien korporat Anda.
+              Nebras membantu bisnis tampil lebih dipercaya dan menghasilkan
+              pelanggan melalui website modern premium.
             </motion.p>
 
             {/* CTAs */}
@@ -309,10 +322,10 @@ export default function HomePage() {
         />
       </section>
 
-      {/* ═══ TRUSTED BY ═══ */}
+      {/* ΓòÉΓòÉΓòÉ TRUSTED BY ΓòÉΓòÉΓòÉ */}
       <TrustedBy />
 
-      {/* ═══ WHY NEBRAS ═══ */}
+      {/* ΓòÉΓòÉΓòÉ WHY NEBRAS ΓòÉΓòÉΓòÉ */}
       <section className="section-light py-section">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <FadeUp className="text-center mb-16">
@@ -343,7 +356,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ INDUSTRIES ═══ */}
+      {/* ΓòÉΓòÉΓòÉ INDUSTRIES ΓòÉΓòÉΓòÉ */}
       <section className="section-dark py-section">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <FadeUp className="mb-16">
@@ -389,7 +402,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ TESTIMONIALS ═══ */}
+      {/* ΓòÉΓòÉΓòÉ TESTIMONIALS ΓòÉΓòÉΓòÉ */}
       <section className="section-white py-section">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <FadeUp className="text-center mb-16">
@@ -446,7 +459,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ FEATURES STRIP ═══ */}
+      {/* ΓòÉΓòÉΓòÉ FEATURES STRIP ΓòÉΓòÉΓòÉ */}
       <section className="section-light py-12">
         <div className="max-w-7xl mx-auto px-5 md:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -470,7 +483,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ═══ FINAL CTA ═══ */}
+      {/* ΓòÉΓòÉΓòÉ FINAL CTA ΓòÉΓòÉΓòÉ */}
       <section className="section-dark py-section">
         <div className="max-w-4xl mx-auto px-5 md:px-8 text-center">
           <FadeUp>
@@ -478,7 +491,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium text-white/70 mb-8"
               style={{ borderColor: "rgba(255,196,54,0.3)", background: "rgba(255,196,54,0.06)" }}
             >
-              ⚠️ Hanya tersisa <span className="text-gold font-bold mx-1">3 slot</span> proyek bulan ini
+              ΓÜá∩╕Å Hanya tersisa <span className="text-gold font-bold mx-1">3 slot</span> proyek bulan ini
             </div>
 
             <h2
@@ -507,7 +520,7 @@ export default function HomePage() {
             </div>
 
             <div className="mt-10 flex items-center justify-center gap-6 text-white/30 text-sm">
-              {["✓ Konsultasi 100% gratis", "✓ Proposal dalam 24 jam", "✓ Tanpa commitment"].map((t) => (
+              {["Γ£ô Konsultasi 100% gratis", "Γ£ô Proposal dalam 24 jam", "Γ£ô Tanpa commitment"].map((t) => (
                 <span key={t}>{t}</span>
               ))}
             </div>
