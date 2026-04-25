@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
 
 const InstagramSVG = () => (
@@ -42,11 +43,14 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-12 mb-16 pb-16 border-b border-white/10">
           {/* Brand */}
           <div className="md:col-span-5 space-y-5">
-            <Link href="/" className="flex items-center gap-2.5">
-              <div className="w-10 h-10 rounded-xl flex items-center justify-center text-navy font-black text-xl" style={{ background: "#FFC436" }}>
-                N
-              </div>
-              <span className="text-2xl font-black text-white tracking-tight">NEBRAS</span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.jpg"
+                alt="NEBRAS Logo"
+                width={130}
+                height={40}
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
             </Link>
             <p className="text-white/50 leading-relaxed max-w-sm text-[0.95rem]">
               Membantu bisnis Indonesia tampil premium, dipercaya, dan menghasilkan lebih banyak pelanggan.
