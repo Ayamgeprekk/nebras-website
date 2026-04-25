@@ -47,49 +47,44 @@ export default function Navbar() {
       >
         <nav className="max-w-7xl mx-auto px-5 md:px-8 flex items-center justify-between gap-8">
           {/* Logo */}
-          <Link href="/" className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center shrink-0 group">
             <div className={cn(
-              "relative h-10 px-3 py-1 rounded-lg transition-all duration-300",
-              isDark ? "bg-white shadow-lg shadow-gold/10" : "bg-transparent"
+              "relative px-4 py-2 rounded-xl transition-all duration-500",
+              scrolled ? "bg-navy/5" : isDark ? "bg-white/10" : "bg-navy/5"
             )}>
               <Image
                 src="/logo.jpg"
                 alt="NEBRAS Logo"
-                width={120}
-                height={36}
-                className="h-full w-auto object-contain"
+                width={110}
+                height={32}
+                className="h-8 w-auto object-contain transition-transform group-hover:scale-105"
                 priority
               />
             </div>
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-2">
             {links.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "px-5 py-2 rounded-full text-sm font-bold transition-all duration-300 relative group",
+                  "px-4 py-2 rounded-lg text-[13px] font-bold uppercase tracking-wider transition-all duration-300 relative",
                   pathname === link.href
                     ? isDark ? "text-white" : "text-navy"
                     : isDark
-                    ? "text-white/60 hover:text-white"
-                    : "text-navy/60 hover:text-navy"
+                    ? "text-white/40 hover:text-white"
+                    : "text-navy/40 hover:text-navy"
                 )}
               >
                 {link.label}
                 {pathname === link.href && (
                   <motion.div
-                    layoutId="nav-active"
-                    className="absolute inset-0 bg-blue-glow/10 rounded-full -z-10"
-                    transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                    layoutId="nav-glow"
+                    className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-gold shadow-[0_0_10px_#FFC436]"
                   />
                 )}
-                <span className={cn(
-                  "absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-0.5 rounded-full transition-all duration-300 group-hover:w-1/2",
-                  isDark ? "bg-gold" : "bg-blue-glow"
-                )} />
               </Link>
             ))}
           </div>
@@ -98,7 +93,10 @@ export default function Navbar() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/konsultasi"
-              className="btn-gold px-5 py-2.5 text-sm animate-pulse-gold"
+              className={cn(
+                "btn-gold !py-2.5 !text-xs !px-6 transition-all duration-500",
+                isDark ? "shadow-none hover:shadow-gold/20" : ""
+              )}
             >
               Konsultasi Gratis
             </Link>

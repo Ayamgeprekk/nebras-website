@@ -225,52 +225,37 @@ export default function HomePage() {
               Tersedia untuk proyek baru — Slot terbatas bulan ini
             </motion.div>
 
-            {/* Lantern Icon */}
+            {/* Branding Accent */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1, duration: 0.8 }}
-              className="flex justify-center mb-8"
+              transition={{ delay: 0.05, duration: 0.8 }}
+              className="flex justify-center mb-10"
             >
-              <div className="relative">
-                <div
-                  className="w-20 h-20 rounded-2xl flex items-center justify-center text-navy text-4xl font-black animate-float"
-                  style={{
-                    background: "#FFC436",
-                    boxShadow: "0 0 60px rgba(255,196,54,0.5), 0 0 120px rgba(255,196,54,0.2)",
-                  }}
-                >
-                  🏮
-                </div>
-                <div
-                  className="absolute inset-0 rounded-2xl animate-glow"
-                  style={{ background: "rgba(255,196,54,0.2)", filter: "blur(20px)" }}
-                />
-              </div>
+              <div className="w-12 h-1 bg-gradient-to-r from-gold to-transparent rounded-full" />
             </motion.div>
 
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.15, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
-              className="text-white mb-6"
-              style={{ fontSize: "clamp(3rem,7vw,6.5rem)", lineHeight: "0.95", letterSpacing: "-0.04em", fontWeight: 900 }}
+              transition={{ delay: 0.1, duration: 1, ease: [0.16, 1, 0.3, 1] }}
+              className="text-white mb-8"
+              style={{ fontSize: "clamp(3.5rem,8vw,7.5rem)", lineHeight: "0.85", letterSpacing: "-0.06em", fontWeight: 900 }}
             >
-              Website Premium.{" "}
-              <span className="text-gradient-gold">Pertumbuhan Nyata.</span>
+              Website Premium. <br />
+              <span className="text-gradient-gold">Dampak Nyata.</span>
             </motion.h1>
 
             {/* Sub */}
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.25, duration: 0.8 }}
-              className="text-white/55 text-xl md:text-2xl leading-relaxed mb-10 max-w-2xl mx-auto"
-              style={{ letterSpacing: "-0.02em" }}
+              transition={{ delay: 0.2, duration: 1 }}
+              className="text-white/40 text-xl md:text-2xl leading-relaxed mb-12 max-w-2xl mx-auto font-medium"
+              style={{ letterSpacing: "-0.03em" }}
             >
-              Nebras membantu bisnis tampil lebih dipercaya dan menghasilkan
-              pelanggan melalui website modern premium.
+              Bukan sekadar desain cantik. Kami membangun mesin konversi yang memenangkan kepercayaan klien korporat Anda.
             </motion.p>
 
             {/* CTAs */}
